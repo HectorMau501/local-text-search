@@ -3,7 +3,7 @@ from collections import defaultdict
 
 def tokenize(text: str) -> list[str]:
     #Convert text to lowercase and extract words using regex
-    return re.findall(r"\w+", text.lower())
+    return re.findall(text.lower())
 
 def build_index(files: list[str]) -> dict[str, dict[str, int]]:
     index = defaultdict(lambda: defaultdict(int)) # Initialize a nested defaultdict for the index
